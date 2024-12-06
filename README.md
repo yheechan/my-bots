@@ -2,11 +2,11 @@
 Attempt to use [Slackbot](https://slack.com/intl/ko-kr/help/articles/202026038-Slackbot-%EC%86%8C%EA%B0%9C) and practice coding with OOP (modules). Mostly waste time...
 
 ## Setting ``SLACK_TOKEN`` to environmental variable
-User should set their own slack token to environment variable, ``SLACK_TOKEN`` to enable connection with user's own slack channel.
+User should set their own [slack token](https://api.slack.com/tutorials/tracks/getting-a-token) to environmental variable, ``SLACK_TOKEN``, to enable connection with user's own **slack channel**.
   * reference cite: [link](https://www.datacamp.com/tutorial/how-to-send-slack-messages-with-python)
 
 ## 1. timer-bot
-Timer-bot registers a timer and and automatically alerts user through slack channel and logs the information to a file.
+Timer-bot **registers** a timer and and automatically **alerts** user through slack channel and **logs** the information to a file.
   * motivation:
     1. Form some kind of drive to stay focused on one task.
     2. Enable easy automated way of logging work status.
