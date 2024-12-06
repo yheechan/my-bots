@@ -1,5 +1,5 @@
 # hcy-python-bot
-Attempt to use slack bot to implement basic automations.
+Attempt to use (Slackbot)[https://slack.com/intl/ko-kr/help/articles/202026038-Slackbot-%EC%86%8C%EA%B0%9C] and practice coding with OOP (modules). Mostly waste time...
 
 ## Setting ``SLACK_TOKEN`` to environmental variable
 User should set their own slack token to environment variable, ``SLACK_TOKEN`` to enable connection with user's own slack channel.
@@ -15,6 +15,8 @@ Timer-bot registers a timer and and automatically alerts user through slack chan
 1. Starts and ends a timer based on user input, ``-t <goal-time>`` (metric: minutes, type: float).
 2. Alerts start and end time to user through slack channel, ``-sc <slack-channel>`` (optional).
 3. Logs the timer information to ``results/logs/timer_logs.csv`` file.
+
+Example File: [timer_logs_example.csv](./results/logs/timer_logs_example.csv)
 
 Example Log:
 idx | label | comment | date | goal_time(min) | start_time | end_time | durated_time (min)
