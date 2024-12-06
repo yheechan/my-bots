@@ -44,7 +44,7 @@ options:
 
 A user can register a timer with following input arguments:
   * ``-sc <slack-channel>`` (optional): name of the slack channel.
-  * ``-t <goal-time>`` (required): goal time in minutes (float type).
+  * ``-gt <goal-time>`` (required): goal time in minutes (float type).
   * ``-l <str>`` (required): basic label for what your timer is for.
   * ``-c <str>`` (optional): basic commentary about the timer.
 
