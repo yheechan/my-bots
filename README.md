@@ -4,7 +4,7 @@
 ## Timer
 Usage:
 ```
-usage: timer.py [-h] -t TIME -l LABEL [-c COMMENT]
+usage: timer.py [-h] -t TIME -l LABEL [-c COMMENT] [-s SLACK]
 
 Timer
 
@@ -15,6 +15,8 @@ options:
                         Label for the timer
   -c COMMENT, --comment COMMENT
                         Comment for the timer
+  -s SLACK, --slack SLACK
+                        Slack channel name to send the message
 ```
 
 last updated Dec 06, 2024
