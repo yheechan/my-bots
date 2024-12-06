@@ -1,5 +1,5 @@
 # hcy-python-bot
-Attempt to use (Slackbot)[https://slack.com/intl/ko-kr/help/articles/202026038-Slackbot-%EC%86%8C%EA%B0%9C] and practice coding with OOP (modules). Mostly waste time...
+Attempt to use [Slackbot](https://slack.com/intl/ko-kr/help/articles/202026038-Slackbot-%EC%86%8C%EA%B0%9C) and practice coding with OOP (modules). Mostly waste time...
 
 ## Setting ``SLACK_TOKEN`` to environmental variable
 User should set their own slack token to environment variable, ``SLACK_TOKEN`` to enable connection with user's own slack channel.
