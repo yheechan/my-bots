@@ -1,22 +1,54 @@
 # hcy-python-bot
+Attempt to use slack bot to implement basic automations.
 
+## Setting ``SLACK_TOKEN`` to environmental variable
+User should set their own slack token to environment variable, ``SLACK_TOKEN`` to enable connection with user's own slack channel.
+  * reference cite: [link](https://www.datacamp.com/tutorial/how-to-send-slack-messages-with-python)
 
-## Timer
-Usage:
+## 1. timer-bot
+Timer-bot registers a timer and and automatically alerts user through slack channel and logs the information to a file.
+  * motivation:
+    1. Form some kind of drive to stay focused on one task.
+    2. Enable easy automated way of logging work status.
+
+### Functionalities
+1. Starts and ends a timer based on user input, ``-t <goal-time>`` (metric: minutes, type: float).
+2. Alerts start and end time to user through slack channel, ``-sc <slack-channel>`` (optional).
+3. Logs the timer information to ``results/logs/timer_logs.csv`` file.
+
+Example Log:
+idx | label | comment | date | goal_time(min) | start_time | end_time | durated_time (min)
+--- | --- | --- | --- | --- | --- | --- | ---
+1 | read-book | The-Bible | \<year-month-date\> | \<min-in-float\> | \<hour:min:sec\> | \<hour:min:sec\> | \<min-in-float\>
+2 | read-book | 길갈 [INTERRUPTED] | 2024-12-06 | 30.0 | 17:37:18 | 17:37:23 | 0.06666666666666667
+
+### Usage
 ```
-usage: timer.py [-h] -t TIME -l LABEL [-c COMMENT] [-s SLACK]
+usage: timer-bot.py [-h] [-sc SLACK_CHANNEL] -gt GOAL_TIME -l LABEL [-c COMMENT]
 
-Timer
+Timer Bot
 
 options:
   -h, --help            show this help message and exit
-  -t TIME, --time TIME  Time in minutes (float type) for the timer
+  -sc SLACK_CHANNEL, --slack-channel SLACK_CHANNEL
+                        Slack channel name to send the message
+  -gt GOAL_TIME, --goal-time GOAL_TIME
+                        Time in minutes (float type) for the timer
   -l LABEL, --label LABEL
                         Label for the timer
   -c COMMENT, --comment COMMENT
                         Comment for the timer
-  -s SLACK, --slack SLACK
-                        Slack channel name to send the message
+```
+
+A user can register a timer with following input arguments:
+  * ``-sc <slack-channel>`` (optional): name of the slack channel.
+  * ``-t <goal-time>`` (required): goal time in minutes (float type).
+  * ``-l <str>`` (required): basic label for what your timer is for.
+  * ``-c <str>`` (optional): basic commentary about the timer.
+
+Example Execution Command:
+```
+$ python3 timer-bot.py -sc <slack-channel> -gt 30.0 -l read-book -c The-Bible
 ```
 
 last updated Dec 06, 2024

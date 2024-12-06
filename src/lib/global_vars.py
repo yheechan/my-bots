@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 curr_script = Path(__file__).resolve()
@@ -13,3 +14,6 @@ if not RESULTS_DIR.exists():
 LOG_DIR = RESULTS_DIR / "logs"
 if not LOG_DIR.exists():
     LOG_DIR.mkdir()
+
+
+SLACK_TOKEN = os.environ["SLACK_TOKEN"]

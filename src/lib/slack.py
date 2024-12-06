@@ -1,11 +1,15 @@
-import os
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
+import lib.global_vars as gv
+
 
 class Slack:
+    """
+    Slack class to send messages to a Slack channel
+    """
     def __init__(self, channel_name=None, bot_name="Un-Named Bot"):
-        self.client = WebClient(token=os.environ["SLACK_TOKEN"])
+        self.client = WebClient(token=gv.SLACK_TOKEN)
         self.channel_name = channel_name
         self.deactivated = False
         if channel_name is None:
