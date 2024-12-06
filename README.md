@@ -5,7 +5,7 @@ Attempt to use [Slackbot](https://slack.com/intl/ko-kr/help/articles/202026038-S
 User should set their own [slack token](https://api.slack.com/tutorials/tracks/getting-a-token) to environmental variable, ``SLACK_TOKEN``, to enable connection with user's own **slack channel**.
   * reference cite: [link](https://www.datacamp.com/tutorial/how-to-send-slack-messages-with-python)
 
-## 1. timer-bot
+## 1. Timer-bot
 Timer-bot **registers** a timer and and automatically **alerts** user through slack channel and **logs** the information to a file.
   * motivation:
     1. Form some kind of drive to stay focused on one task.
@@ -53,5 +53,15 @@ Example Execution Command:
 $ python3 timer-bot.py -sc <slack-channel> -gt 30.0 -l read-book -c The-Bible
 ```
 * User can press ``<ctrl+c>`` key to terminate timer (logs the timer before termination).
+
+
+### Timer-bot output
+* Terminal output
+
+  ![timer-bot-terminal-output](./assets/timer-bot-terminal-output.png)
+
+* Slack output
+
+  ![timer-bot-slack-output](./assets/timer-bot-slack-output.png)
 
 last updated Dec 06, 2024
