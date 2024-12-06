@@ -1,5 +1,5 @@
 # hcy-python-bot
-Attempt to use [Slackbot](https://slack.com/intl/ko-kr/help/articles/202026038-Slackbot-%EC%86%8C%EA%B0%9C) and practice coding with OOP (modules). Mostly waste time...
+Attempt to use [Slackbot](https://slack.com/intl/ko-kr/help/articles/202026038-Slackbot-%EC%86%8C%EA%B0%9C) and practice coding with OOP (modules). **Mostly waste time...**
 
 ## Setting ``SLACK_TOKEN`` to environmental variable
 User should set their own [slack token](https://api.slack.com/tutorials/tracks/getting-a-token) to environmental variable, ``SLACK_TOKEN``, to enable connection with user's own **slack channel**.
@@ -52,5 +52,6 @@ Example Execution Command:
 ```
 $ python3 timer-bot.py -sc <slack-channel> -gt 30.0 -l read-book -c The-Bible
 ```
+* User can press ``<ctrl+c>`` key to terminate timer (logs the timer before termination).
 
 last updated Dec 06, 2024
